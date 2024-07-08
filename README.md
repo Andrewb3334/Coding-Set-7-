@@ -33,7 +33,7 @@ def main():
     categories = []
     expenses = []
 
-    with open('expenses.txt', 'r') as file: 
+    with open('/expenses.txt', 'r') as file: 
         for line in file:
 
             category, amount = line.strip().split(', ')
@@ -41,7 +41,7 @@ def main():
             expenses.append(float(amount))
 
     plt.figure(figsize=(8,6))
-    plt.pie(expenses, labels=catergories, autopct='%1.1f%', startangle=140)
+    plt.pie(expenses, labels=catergories, autopct='%1.1f%%', startangle=140)
     plt.title('Expense distribution for Last Month')
     plt.axis('equal')
     plt.show()
