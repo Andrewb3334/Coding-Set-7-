@@ -7,14 +7,14 @@ list2 = [10 , 20, 30]
 list3 = list1 + list2 
 print(list3)
 Programming Exercise #1
-def main()
+def main():
     daily_sales = []
 
     days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
 
     for day in days:
         sales = float(input(f"Enter the sales for {day}: $"))
-        
+        daily_sales.append(sales)
 
     total_sales = sum(daily_sales)
 
