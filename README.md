@@ -50,16 +50,20 @@ if __name__ == "__main__":
     main()
 
 Programming Exercise #6
-def display_numbers_greater_than(1st, n):
+def display_numbers_greater_than(numbers, n):
     """
-    Display numbers in the list that are greater than n. 
-
-    Parameters: 
-    - 1st (list): A list of numbers. 
+    Display numbers in the list that are greater than n.
+    
+    Parameters:
+    - numbers (list): A list of numbers.
     - n (int or float): The threshold number to compare against.
     """
+    try:
+        n = float(n)
+    except ValueError:
+        raise TypeError("n must be convertible to float")
     
-    results = [num for num in 1st if num > n]
+    results = [num for num in numbers if num > n]
 
     if results:
         print(f"Numbers greater than {n}: {results}")
