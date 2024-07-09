@@ -48,3 +48,25 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+Programming Exercise #6
+def display_numbers_greater_than(1st, n):
+    """
+    Display numbers in the list that are greater than n. 
+
+    Parameters: 
+    - 1st (list): A list of numbers. 
+    - n (int or float): The threshold number to compare against.
+    """
+    
+    results = [num for num in 1st if num > n]
+
+    if results:
+        print(f"Numbers greater than {n}: {results}")
+    else:
+        print(f"There are no numbers greater than {n} in the list.")
+
+if __name__ == "__main__":
+    numbers = [12, 5, 8, 15, 3, 10, 20, 7]
+    threshold = 10
+    display_numbers_greater_than(numbers, threshold)
