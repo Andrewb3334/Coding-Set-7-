@@ -74,3 +74,35 @@ if __name__ == "__main__":
     numbers = [12, 5, 8, 15, 3, 10, 20, 7]
     threshold = 10
     display_numbers_greater_than(numbers, threshold)
+
+Exercise number 4
+
+def main():
+
+    numbers = []
+
+    for i in range(1,21):
+        while True:
+            try:
+                num = float(input(f"Enter number {i}: "))
+                numbers.append(num)
+                break
+            except ValueError:
+                print("Invalid input.  Please enter a valid number.")
+
+    lowest = min(numbers)
+
+    highest = max(numbers)
+
+    total = sum(numbers)
+
+    average = total / len(numbers)
+
+    print("\nResults:")
+    print(f"Lowest number: {lowest}")
+    print(f"Highest number {highest}")
+    print(f"Total of the numbers: {total}")
+    print(f"Average of the numbers: {average:.2f}")
+
+if __name__ == "__main__":
+    main()
